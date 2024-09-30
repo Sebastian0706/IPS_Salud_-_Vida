@@ -9,6 +9,10 @@
   border-radius: 10px;
   position: relative;
   overflow: hidden;
+ 
+}
+.container h1{
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .container::before {
@@ -24,10 +28,6 @@
   pointer-events: none;
 }
 
-.logo{
-font-family: 'Times New Roman', Times, serif;
-
-}
 
 .logo img{
   border: 5px solid black;
