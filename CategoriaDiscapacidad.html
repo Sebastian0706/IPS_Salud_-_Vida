@@ -7,6 +7,14 @@
     <title>Servicio de salud</title>
     <link rel="stylesheet" href="Css/Estilo.css">
     <link rel="stylesheet" href="Css/bootstrap.css">
+    <style>
+        .tabla-container {
+            max-height: 400px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 
 <body class="container">
@@ -22,7 +30,6 @@
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="Index.html">Inicio</a>
                         </li>
-
                     </ul>
                 </div>
             </div>
@@ -34,297 +41,199 @@
     </center>
 
     <div class="crear">
-
         <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#crear">
             Crear
         </button>
-
     </div>
-    
 
     <center>
-
-        <br>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">Codigo</th>
-                    <th scope="col">Descripcion</th>
-                    <th scope="col">Opciones</th>
-                </tr>
-            </thead>
-            <tbody class="table-group-divider">
-                <tr>
-
-                    <th scope="row">1</th>
-
-                    <td>Discapacidad fisica</td>
-
-                    <td>
-                        <div class="botones">
-
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#editar">
-                                Editar
-                            </button>
-
-                            <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                                data-bs-target="#eliminar">
-                                Eliminar
-                            </button>
-
-
-                        </div>
-                    </td>
-
-                </tr>
-
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Discapacidad visual</td>
-                    <td>
-                        <div class="botones">
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#editar">
-                                Editar
-                            </button>
-
-
-                            <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                                data-bs-target="#eliminar">
-                                Eliminar
-                            </button>
-
-                </tr>
-
-
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Discapacidad auditiva</td>
-                    <td>
-                        <div class="botones">
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#editar">
-                                Editar
-                            </button>
-
-
-                            <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                                data-bs-target="#eliminar">
-                                Eliminar
-                            </button>
-
-
-                        </div>
-                    </td>
-                </tr>
-
-                <tr>
-
-                    <th scope="row">4</th>
-                    <td>Discapacidad intelectual</td>
-                    <td>
-                        <div class="botones">
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#editar">
-                                Editar
-                            </button>
-
-
-                            <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                                data-bs-target="#eliminar">
-                                Eliminar
-                            </button>
-
-
-                        </div>
-                    </td>
-                </tr>
-
-
-                <tr>
-                    <th scope="row">5</th>
-                    <td>Discapacidad sicosocial</td>
-                    <td>
-                        <div class="botones">
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#editar">
-                                Editar
-                            </button>
-
-
-                            <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                                data-bs-target="#eliminar">
-                                Eliminar
-                            </button>
-
-                        </div>
-
-                </tr>
-
-                <tr>
-
-                    <th scope="row">6</th>
-                    <td>Discapacidad sordoceguera</td>
-                    <td>
-                        <div class="botones">
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#editar">
-                                Editar
-                            </button>
-
-
-                            <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                                data-bs-target="#eliminar">
-                                Eliminar
-                            </button>
-
-
-                        </div>
-                    </td>
-                </tr>
-
-                <tr>
-
-
-                    <th scope="row">7</th>
-                    <td>Discapacidad multiple</td>
-                    <td>
-                        <div class="botones">
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#editar">
-                                Editar
-                            </button>
-
-                            <!-- Modal -->
-
-                            <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                                data-bs-target="#eliminar">
-                                Eliminar
-                            </button>
-
-
-                        </div>
-                    </td>
-
-                <tr>
-
-                    <th scope="row">8</th>
-                    <td>Sin discapacidad</td>
-                    <td>
-                        <div class="botones">
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#editar">
-                                Editar
-                            </button>
-
-
-                            <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                                data-bs-target="#eliminar">
-                                Eliminar
-                            </button>
-
-                        </div>
-                    </td>
-                </tr>
-
-            </tbody>
-
-            <!-- Modal crear -->
-             
-            <div class="modal fade" id="crear" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Crear categoria</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-
-                        <div class="modal-body">
-
-                            <div class="input-group mb-3">
-                                <span class="input-group-text" id="inputGroup-sizing-default">Codigo</span>
-                                <input type="text" class="form-control" aria-label="Sizing example input"
-                                    aria-describedby="inputGroup-sizing-default" />
-
-                            </div>
-                            <div class="input-group mb-3">
-                                <span class="input-group-text" id="inputGroup-sizing-default">Descripcion</span>
-                                <input type="text" class="form-control" aria-label="Sizing example input"
-                                    aria-describedby="inputGroup-sizing-default" />
-                            </div>
-
-                        </div>
-
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                            <button type="button" class="btn btn-primary">Guardar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Modal editar -->
-
-            <div class="modal fade" id="editar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Editar categoria</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Modal eliminar -->
-
-            <div class="modal fade" id="eliminar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Eliminar categoria</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            Esta seguro que desea eliminar esta categoria?
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                            <button type="button" class="btn btn-primary">Eliminar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </table>
-        
-            
-            
+        <div class="tabla-container">
+            <table class="table" id="tablaCategorias">
+                <thead>
+                    <tr>
+                        <th scope="col">Codigo</th>
+                        <th scope="col">Descripcion</th>
+                        <th scope="col">Opciones</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider" id="tablaCuerpo">
+                </tbody>
+            </table>
         </div>
-
-        <br>
-
-        <script src="JS/script.js"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-        <script src="JS/bootstrap.js"></script>
     </center>
- 
+
+    <div class="modal fade" id="crear" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Crear categoria</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Codigo</span>
+                        <input type="text" class="form-control" id="nuevoCodigo" />
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Descripcion</span>
+                        <input type="text" class="form-control" id="nuevaDescripcion" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" id="guardarCategoria">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="editar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Editar categoria</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Codigo</span>
+                        <input type="text" class="form-control" id="editarCodigo" disabled />
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Descripcion</span>
+                        <input type="text" class="form-control" id="editarDescripcion" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" id="guardarCambios">Guardar cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="eliminar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Eliminar categoria</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Esta seguro que desea eliminar esta categoria?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-danger" id="confirmarEliminar">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="JS/bootstrap.js"></script>
+    <script>
+        let categorias = JSON.parse(localStorage.getItem('categorias')) || [
+            { codigo: '1', descripcion: 'Discapacidad visual' },
+            { codigo: '2', descripcion: 'Discapacidad auditiva' },
+            { codigo: '3', descripcion: 'Discapacidad intelectual' },
+            { codigo: '4', descripcion: 'Discapacidad psicosocial' },
+            { codigo: '5', descripcion: 'Discapacidad sordomudo' },
+            { codigo: '6', descripcion: 'Discapacidad múltiple' },
+            { codigo: '7', descripcion: 'Discapacidad invisible' },
+            { codigo: '8', descripcion: 'Sin discapacidad' }
+        ];
+
+        $(document).ready(function () {
+            mostrarCategorias();
+
+            $('#guardarCategoria').on('click', function () {
+                const nuevoCodigo = $('#nuevoCodigo').val();
+                const nuevaDescripcion = $('#nuevaDescripcion').val();
+                
+                if (nuevoCodigo && nuevaDescripcion) {
+                    const categoria = { codigo: nuevoCodigo, descripcion: nuevaDescripcion };
+                    categorias.push(categoria);
+                    $('#nuevoCodigo').val('');
+                    $('#nuevaDescripcion').val('');
+                    $('#crear').modal('hide');
+                    guardarCategorias();
+                    mostrarCategorias();
+                } else {
+                    alert('Por favor, complete todos los campos.');
+                }
+            });
+
+            $('#editar').on('show.bs.modal', function (event) {
+                const button = $(event.relatedTarget);
+                const id = button.data('id');
+
+                const categoria = categorias[id - 1];
+                const modal = $(this);
+                modal.find('#editarCodigo').val(categoria.codigo);
+                modal.find('#editarDescripcion').val(categoria.descripcion);
+                modal.data('id', id);
+            });
+
+            $('#guardarCambios').on('click', function () {
+                const id = $('#editar').data('id') - 1;
+                const nuevaDescripcion = $('#editarDescripcion').val();
+
+                if (nuevaDescripcion) {
+                    categorias[id].descripcion = nuevaDescripcion;
+                    $('#editar').modal('hide');
+                    guardarCategorias();
+                    mostrarCategorias();
+                } else {
+                    alert('Por favor, complete todos los campos.');
+                }
+            });
+
+            $('#eliminar').on('show.bs.modal', function (event) {
+                const button = $(event.relatedTarget);
+                const id = button.data('id');
+                $(this).data('id', id);
+            });
+
+            $('#confirmarEliminar').on('click', function () {
+                const id = $('#eliminar').data('id') - 1;
+                categorias.splice(id, 1);
+                $('#eliminar').modal('hide');
+                guardarCategorias();
+                mostrarCategorias();
+            });
+        });
+
+        function mostrarCategorias() {
+            const tablaCuerpo = $('#tablaCuerpo');
+            tablaCuerpo.empty();
+            categorias.forEach((categoria, index) => {
+                tablaCuerpo.append(`
+                    <tr id="categoria-${index}">
+                        <th scope="row">${categoria.codigo}</th>
+                        <td>${categoria.descripcion}</td>
+                        <td>
+                            <div class="botones">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#editar" data-id="${index + 1}">
+                                    Editar
+                                </button>
+                                <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                    data-bs-target="#eliminar" data-id="${index + 1}">
+                                    Eliminar
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                `);
+            });
+        }
+
+        function guardarCategorias() {
+            localStorage.setItem('categorias', JSON.stringify(categorias));
+        }
+    </script>
 </body>
 
 </html>
